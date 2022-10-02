@@ -227,7 +227,7 @@ class Sonarr(object):
         )
 
     def get_all_quality_profiles(self):
-        return self._api_get("profile", {}) or None
+        return self._api_get("qualityprofile", {}) or None
 
     def lookup_root_folder(self, v):
         # Look up root folder from a path or id
