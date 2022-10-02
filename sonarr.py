@@ -22,7 +22,7 @@ class Sonarr(object):
             self.logger.error(
                 "Invalid Sonarr URL detected. Please update your settings to include http:// or https:// on the beginning of the URL."
             )
-        self.api_url = api_url + "/api/{endpoint}?apikey=" + api_key
+        self.api_url = api_url + "/api/v3/{endpoint}?apikey=" + api_key
         self._quality_profiles = self.get_all_quality_profiles()
         self._root_folders = self.get_root_folders()
         self._all_series = {}
